@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hant"></html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>小時光咖啡館</title>
   <link rel="stylesheet" href="booking.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
  <script src="scripts/main.js"></script>
 </head>
@@ -45,7 +47,7 @@
 
         <div class="form-items">
             <label for="date">日期：</label>
-            <input type="date" id="date" class="form-control" required>
+            <input type="date" id="date" class="form-control" min="2025-12-25" required>
         </div>
 
         <div class="form-items">
@@ -85,6 +87,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
         alert("請填寫完整的訂位資訊喔！");
     } else {
         alert(`訂位成功！`);
+        // 這裡可以加入跳轉回首頁
         // window.location.href = "index.html";
     }
 });
